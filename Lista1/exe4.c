@@ -1,22 +1,37 @@
 #include <stdio.h>
 
-int main()
+float a,b;
+float media_simples, media_ponderada;
+
+int main(void)
 {
-    float nota1;
-    float nota2;
-    float media;
-    float media_ponderada;
+   void exibe_dados(float a, float b);
+   printf("Digite duas notas:\n");
+   scanf("%f", &a);
+   scanf("%f", &b);
+   exibe_dados(a,b);
+   return 0;
 
-    printf("Digite a nota 1:\n");
-    scanf("%f", &nota1);
-    printf("Digite a nota 2:\n");
-    scanf("%f", &nota2);
+}
 
-    printf("As notas digitadas foram %.2f e %.2f\n", nota1, nota2);
+void le_notas(float a, float b)
+{
+    return a, b;
+}
 
-    media = (nota1 + nota2) / 2;
-    media_ponderada = (nota1 + (2*nota2))/3;
+void calc_media(float a, float b)
+{
+    media_simples = (a + b) / 2;
+    media_ponderada = (a + b*2) / 3;
+    return media_simples, media_ponderada;
+}
 
-    printf("As medias simples e ponderada, respectivamente, são:%.2f e %.2f", media,  media_ponderada);
-
+void exibe_dados(float a, float b)
+{
+    void le_notas(float a, float b);
+    void calc_media(float a, float b);
+    calc_media(a,b);
+    le_notas(a,b);
+    printf("\nAs notas sao: %.2f e %.2f\n",a,b);
+    printf("As medias simples e ponderada, respectivamente, sao: %.2f e %.2f",media_simples, media_ponderada);
 }
