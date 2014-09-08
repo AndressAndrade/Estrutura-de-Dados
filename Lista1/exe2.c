@@ -1,17 +1,25 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-   int a,b;
-   printf("Digite um valor:\n");
-   scanf("%i",&a);
-   printf("Digite um valor:\n");
-   scanf("%i",&b);
+    int a,b;
+    int maior(int x, int y);
+    printf("Digite dois valores:\n");
+    scanf("%i", &a);
+    scanf("%i", &b);
+    maior(a,b);
+    return 0;
+}
 
-   if(a > b)
-        printf("O maior valor e menor valor,respectivamente,são:%i e %i",a,b);
-   else
-        printf("O maior valor e menor valor,respectivamente,são:%i e %i",b,a);
-  return 0;
+int maior(int x, int y)
+{
+    if(x >= y)
+    {
+        printf("O maior valor eh:%i e o menor valor eh:%i",x,y);
+    }
+    else
+    {
+        printf("O maior valor eh:%i e o menor valor eh:%i",y,x);
+    }
 
 }
