@@ -2,19 +2,23 @@
 
 int main()
 {
-    int a, b;
-    printf("Digite o valor a:\n");
+    int a,b;
+    int troca(int a, int b);
+    printf("Digite dois valores:\n");
     scanf("%i", &a);
-    printf("DIgite o valor b:\n");
     scanf("%i", &b);
-    printf("Os valores de a e b são: %i e %i \n",a,b);
-    int x,y;
-    x = a;
-    y = b;
-    a = y;
-    b = x;
-    printf("Os valores de a e b, atualizados, são: %i e %i ",a,b);
-
+    printf("Antes 'a' eh:%i e 'b' eh:%i\n",a,b);
+    troca(a,b);
     return 0;
+
+}
+
+int troca(int x, int y)
+{
+    int temporaria;
+    temporaria = x;
+    x = y;
+    y = temporaria;
+    printf("Agora 'a' eh:%i e 'b' eh:%i\n",x,y);
 
 }
