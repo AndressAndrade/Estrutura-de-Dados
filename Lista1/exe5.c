@@ -1,15 +1,23 @@
 #include <stdio.h>
 
-int main()
+int a,b;
+
+int main(void)
 {
-    
-    int a, b;
-    printf("Digite a:\n");
-    scanf("%d", &a);
-    printf("Digite b:\n");
-    scanf("%d", &b);
-    soma =  a + b;
+   void soma(int a, int b);
+   printf("Digite dois valores:\n");
+   scanf("%i", &a);
+   scanf("%i", &b);
+   printf("Os dois numeros digitados foram: %i e %i\n",a,b);
+   soma(a,b);
+   return 0;
+
+}
+
+void soma(int a, int b)
+{
+    int soma;
+    soma = a + b;
     a = soma;
-    printf("%d", a);
-    
-    }
+    printf("Agora a variavel A tem o valor da soma de A e B: %i e %i\n",a,b);
+}
