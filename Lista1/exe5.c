@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int a,b;
-
 int main(void)
 {
    void soma(int *pA, int *pB);
-   printf("Digite dois valores:\n");
+   int a,b;
+   printf("Digite dois valores, separados por linha:\n");
    scanf("%i", &a);
    scanf("%i", &b);
    printf("Os dois numeros digitados foram: %i e %i\n",a,b);
