@@ -7,11 +7,11 @@ int main(void)
     scanf("%i\n%i",&a,&b);
     if(&a > &b)
     {
-        printf("O endereco do maior elemento eh:%i",&a);
+        printf("O endereco do maior elemento eh:%p",&a);
     }
     else
     {
-        printf("O endereco do maior elemento eh:%i",&b);
+        printf("O endereco do maior elemento eh:%p",&b);
     }
     return 0;
 }
