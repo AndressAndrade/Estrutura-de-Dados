@@ -1,0 +1,8 @@
+9) Qual o resultado do código abaixo? Explique cada linha.
+
+{
+    int x = 100,*p, **pp; // foi criado uma variavel x ao qual foi atribuido o valor 100, um ponteiro p, e um ponteiro de ponteiro pp
+    p = &x; // o ponteiro p aponta para o endereço da variavel x
+    pp = &p;// o ponteiro do ponteiro aponta para o endereço do ponteiro p
+    printf("Valor de pp: %d\n",**pp); // imprime-se o valor armazenado no endereço que o ponteiro p aponta que no caso é o endereco da variavel x que contem o valor 100.
+}
