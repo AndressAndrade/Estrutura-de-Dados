@@ -1,4 +1,4 @@
-1) Suponha que v é um vetor.Descreva a diferença conceitual entre as
+1)Suponha que v é um vetor.Descreva a diferença conceitual entre as
 
 expressões v[3] e v +3.
 
