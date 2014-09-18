@@ -1,0 +1,63 @@
+2­ Os  programas (trechos de código) abaixo possuem erros? Qual(is)? Como 
+
+deveriam ser? Comente ? 
+
+a)
+
+void main(){
+
+intx,*p;
+
+x =100;
+
+p=x;
+
+printf(“Valor de p: %d.\n”, *p); 
+
+}
+
+
+O código correto seria.
+
+void main()
+{
+    int x, *p;
+
+    x = 100;
+
+    p = &x;  //Deve-se usar o 'e' comercial para especificar endereço.
+
+    printf("O valor de p e: %d.", *p); // As aspas corretas serias essas ""
+
+}
+
+
+b)
+
+void troca (int *i, int *j){
+
+int *temp;
+
+*temp = *i;
+
+*i = *j;
+
+*j = *temp;
+
+}
+
+
+Nao é necessario temp ser um apontador.
+
+void troca(int*i,int*j)
+{
+
+int temp;
+
+temp = *i;
+
+*i = *j;
+
+*j = temp;
+
+}
