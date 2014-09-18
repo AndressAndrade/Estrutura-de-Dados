@@ -1,0 +1,19 @@
+5) (sem usar o computador) Qual o conteúdo do vetor a depois dos seguintes
+comandos.
+int a[99];
+for (i = 0; i < 99; ++i) a[i] = 98 - i;
+for (i = 0; i < 99; ++i) a[i] = a[a[i]];
+
+
+No primeiro for
+for (i = 0; i < 99; ++i) a[i] = 98 - i;
+a[0] = 98 a[1] = 97 a[98] = 1
+
+Teremos um vetor contendo os elementos de 98 até 1.
+
+No segundo for
+for (i = 0; i < 99; ++i) a[i] = a[a[i]];
+a[0] = a[a[0]], sabemos que a[0] contem o valor 98 assim > a[0] = a[98] = 1
+
+Sendo assim com este segundo for, temos a lista no sentido contrario
+Um vetor contendo os elementos de 1 até 98.
