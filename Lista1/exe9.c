@@ -3,7 +3,7 @@
 int main()
 {
         int N,M,x,*resultado;
-        int somadevetores(int N, int M, int *v1, int *v2)
+        int somadevetores(int N, int M, int *v1, int *v2, int *v3)
         printf("Digite o numero de elementos de seu primeiro vetor:\n");
         scanf("%i",&N);
         int v1[N];
@@ -19,8 +19,14 @@ int main()
         {
             scanf("%i",&v2[i]);
         }
-        printf("A soma dos dois vetores eh:",resultado)
+        int v3[N];
+        printf("A soma dos dois vetores eh:")
+        somadevetores(int N, int M, int &v1, int &v2, int &v3)
+        for(x = 0; x < N; x++)
+        {
+            printf("%i",&v3[i]);
+        }
         
 }
 
-int somadevetores(int N, int M, int *v1, int *v2)
+int somadevetores(int N, int M, int *v1, int *v2, int *v3)
