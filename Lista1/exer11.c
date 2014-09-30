@@ -32,5 +32,4 @@ void omaior(int *v, int N, int *maior)
                 }
         }
     *maior = v[N-1];
-
 }
