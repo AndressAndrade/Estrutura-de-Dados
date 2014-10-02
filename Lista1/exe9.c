@@ -27,7 +27,6 @@ int main()
         {
             printf("%i ",v3[x]);
         }
-
 }
 
 int somadevetores(int N, int M, int *v1, int *v2, int *v3)
