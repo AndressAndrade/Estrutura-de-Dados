@@ -17,6 +17,11 @@ void verificar(char *a, char *b)
         }
         x += 1;
     }
+    
+    if(x == 7)
+        printf("A string 1 ocorre em 2\n");
+    else
+        printf("A string 1 nao ocorre em 2\n");
 
 
 
