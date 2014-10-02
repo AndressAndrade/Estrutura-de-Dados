@@ -74,9 +74,9 @@ printf ("%s vem depois de %s no dicionário", a, b);
 
 Não é necessario o uso de ponteiros neste codigo, alem disso deve se inverter as posicoes no else
 
-char a, b; 
-a = "abacate";
-b = "uva";  
+char a[], b[]; 
+a[] = "abacate";
+b[] = "uva";  
 if (a < b)
 {
 printf ("%s vem antes de %s no dicionário", a, b); 
