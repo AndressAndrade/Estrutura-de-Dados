@@ -23,9 +23,6 @@ void verificar(char *a, char *b)
     else
         printf("A string 1 nao ocorre em 2\n");
 
-
-
-
 }
 
 int main()
