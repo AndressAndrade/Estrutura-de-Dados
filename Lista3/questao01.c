@@ -23,7 +23,6 @@ void imprime(int *vector,int n)
         printf("%i ",vector[i]);
     }
     printf("\n");
-
 }
 
 int main()
