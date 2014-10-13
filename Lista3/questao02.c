@@ -22,5 +22,4 @@ int main()
         printf("%i ",vetor[i]);
     }
     return 0;
-
 }
