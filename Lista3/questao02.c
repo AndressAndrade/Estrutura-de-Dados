@@ -3,6 +3,7 @@
 
 int main()
 {
+    
     int n = 1;
     int i = 0;
     int c = 0;
@@ -22,4 +23,6 @@ int main()
         printf("%i ",vetor[i]);
     }
     return 0;
+
+    
 }
