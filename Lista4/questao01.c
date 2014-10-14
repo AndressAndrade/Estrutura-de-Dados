@@ -81,6 +81,8 @@ int main()
     printf("Seu departamento e: %s\n",p[x].DEPTO);
     printf("Sua matricula e: %i\n",p[x].MATRIC);
     printf("O salario total e: %f\n\n",p->SALTOTAL);
-
+    
+    
+    free(p);
     return 0;
 }
