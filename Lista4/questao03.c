@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main()
@@ -12,9 +13,9 @@ int main()
     {
         printf("Digite uma palavra de ate 100 caracteres, sem acento: ");
         gets(p);
-        controle = strcmp(p,"fim"); //Se p for igual a 'fim', controle = 0,execita-se o programa para a palavra fim e termina execucao
+        controle = strcmp(p,"fim"); //Se p for igual a 'fim', controle = 0,executa o programa para a palavra fim e termina execucao
         int a = 0,e = 0,i = 0,o = 0,u = 0,x = 0; //A cada ciclo de palavra devemos zerar os contadores
-        while(p[x] != '\0')// Enquantos nao chegamos ao caracter nulo, continua
+        while(p[x] != '\0')// Enquantos nao chegamos ao caractere nulo, continua
         {
             if(p[x] == 'a')
             {
@@ -44,8 +45,9 @@ int main()
       printf("A palavra tem %i I(s)\n",i);
       printf("A palavra tem %i O(s)\n",o);
       printf("A palavra tem %i U(s)\n\n",u);
-      free(p);
+
     }
 
+    free(p);
     return 0;
 }
