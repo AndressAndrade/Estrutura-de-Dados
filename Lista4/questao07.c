@@ -6,7 +6,6 @@ typedef struct
     char *FILIAL;
     int QTDEFUNC;
     float FATURTOT;
-    float PERCAPITA;
 }registro;
 
 int main()
@@ -14,34 +13,35 @@ int main()
     registro *r;
     r =(registro*)malloc(3*sizeof(registro));
 
-    float aux1;
+    float aux1,percapita[3];
     char *aux2;
+
     int i,j;
 
     r->FILIAL = "SP1";
-    printf("Qual a quantidade de funcionarios de SP: ");
+    printf("Qual a quantidade de funcionarios de SP,entre 0 e 20: ");
     scanf("%i",&r->QTDEFUNC);
     printf("Qual o faturamento total de SP:");
     scanf("%f",&r->FATURTOT);
-    r->PERCAPITA = r->FATURTOT/r->QTDEFUNC;
+    percapita[0] = r->FATURTOT/r->QTDEFUNC;
     r++;
     printf("\n");
 
     r->FILIAL = "RJ1";
-    printf("Qual a quantidade de funcionarios de RJ: ");
+    printf("Qual a quantidade de funcionarios de RJ,entre 0 e 20: ");
     scanf("%i",&r->QTDEFUNC);
     printf("Qual o faturamento total de RJ: ");
     scanf("%f",&r->FATURTOT);
-    r->PERCAPITA = r->FATURTOT/r->QTDEFUNC;
+    percapita[1] = r->FATURTOT/r->QTDEFUNC;
     r++;
     printf("\n");
 
     r->FILIAL = "BH1";
-    printf("Qual a quantidade de funcionarios de BH: ");
+    printf("Qual a quantidade de funcionarios de BH, entre 0 e 20: ");
     scanf("%i",&r->QTDEFUNC);
     printf("Qual o faturamento total de BH: ");
     scanf("%f",&r->FATURTOT);
-    r->PERCAPITA = r->FATURTOT/r->QTDEFUNC;
+    percapita[2] = r->FATURTOT/r->QTDEFUNC;
     r++;
     printf("\n");
 
@@ -52,11 +52,11 @@ int main()
     {
         for(j = i+ 1; j < 3;j++)
         {
-            if(r[i].PERCAPITA > r[j].PERCAPITA)
+            if(percapita[i] > percapita[j])
             {
-                aux1 = r[i].PERCAPITA;
-                r[i].PERCAPITA = r[j].PERCAPITA;
-                r[j].PERCAPITA = aux1;
+                aux1 = percapita[i];
+                percapita[i] = percapita[j];
+                percapita[j] = aux1;
                 aux2 = r[i].FILIAL;
                 r[i].FILIAL = r[j].FILIAL;
                 r[j].FILIAL = aux2;
@@ -67,7 +67,7 @@ int main()
 
     for(i = 0; i < 3; i++)
     {
-        printf("A renda percapita de %s eh: %.2f\n",r[i].FILIAL,r[i].PERCAPITA);
+        printf("A renda percapita de %s eh: %.2f\n",r[i].FILIAL,percapita[i]);
     }
 
 
