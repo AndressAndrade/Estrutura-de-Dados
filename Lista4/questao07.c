@@ -67,7 +67,7 @@ int main()
 
     for(i = 0; i < 3; i++)
     {
-        printf("A renda percapita de %s eh: %.2f\n",r[i].FILIAL,percapita[i]);
+        printf("A renda per capita de %s eh: %.2f\n",r[i].FILIAL,percapita[i]);
     }
 
 
