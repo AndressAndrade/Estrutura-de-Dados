@@ -21,7 +21,7 @@ int main()
     r->FILIAL = "SP1";
     printf("Qual a quantidade de funcionarios de SP,entre 0 e 20: ");
     scanf("%i",&r->QTDEFUNC);
-    printf("Qual o faturamento total de SP:");
+    printf("Qual o faturamento total de SP: ");
     scanf("%f",&r->FATURTOT);
     percapita[0] = r->FATURTOT/r->QTDEFUNC;
     r++;
@@ -37,7 +37,7 @@ int main()
     printf("\n");
 
     r->FILIAL = "BH1";
-    printf("Qual a quantidade de funcionarios de BH, entre 0 e 20: ");
+    printf("Qual a quantidade de funcionarios de BH,entre 0 e 20: ");
     scanf("%i",&r->QTDEFUNC);
     printf("Qual o faturamento total de BH: ");
     scanf("%f",&r->FATURTOT);
