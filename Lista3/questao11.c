@@ -54,10 +54,14 @@ int main()
             {
                 var1 = a;
                 var2 = b;
+                var3 = c;
+                var4 = d;
                 a = i;
                 b = j;
                 c = var1;
                 d = var2;
+                e = var3;
+                f = var4;
                 tem1 = pri;
                 tem2 = seg;
                 pri = matriz[i][j];
@@ -86,7 +90,7 @@ int main()
         }
     }
 
-    printf("\nOs tres maiores elementos da matriz sao: \n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n",pri,a+1,b+1,seg,c+1,d+1,ter,e+1,f+1);
+    printf("\nOs tres maiores elementos da matriz sao: \n\n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n",pri,a+1,b+1,seg,c+1,d+1,ter,e+1,f+1);
 
 
 
