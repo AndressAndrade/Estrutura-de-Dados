@@ -3,7 +3,7 @@
 
 int main()
 {
-   int cidades,i,j;
+   int cidades,i,j,a = 0,b = 0;
    printf("Digite o numero de cidades: ");
    scanf("%i",&cidades);
    float matriz_distancias[cidades][cidades];
@@ -30,7 +30,7 @@ int main()
 
    printf("\nMatriz de distancias: \n\n");
 
-   for(i = 0; i < cidades; i++) //DEFINE DISTANCIAS
+   for(i = 0; i < cidades; i++) //MATRIZ DISTANCIA
    {
        for(j = 0; j < cidades; j++)
        {
@@ -40,8 +40,8 @@ int main()
    }
 
    printf("\nDigite o numero de duas cidades, separando por espaco: ");
-   scanf("%i %i",&i,&j);
-   printf("\nA distancia entre as cidades %i e %i eh: %.2f\n",i,j,matriz_distancias[i][j]);
+   scanf("%i %i",&a,&b);
+   printf("\nA distancia entre as cidades %i e %i eh: %.2f\n",a,b,matriz_distancias[a-1][b-1]);
 
 
    return 0;
