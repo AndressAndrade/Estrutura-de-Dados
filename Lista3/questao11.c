@@ -2,42 +2,43 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-int main()
+int **alocar_matriz(int linhas, int colunas)
 {
-    int i,j,linhas,colunas;
-    int pri=0,seg=0,ter=0,tem1 = 0,tem2 = 0,var1 = 0,var2 = 0,var3 = 0,var4 = 0;
-    int a,b,c,d,e,f;
+    int **matriz;
+
+    int i;
+
+    matriz = malloc(linhas*sizeof(int*));
+
+    for(i = 0 ; i < linhas; i++)
+    {
+        matriz[i] = malloc(colunas*sizeof(int));
+    }
+
+    return matriz;
+
+}
+
+void preencher_matriz(int **matriz, int linhas, int colunas)
+{
+    int i,j;
     srand(time(NULL));
 
-    printf("Digite o numero de linhas da matriz: ");
-    scanf("%i",&linhas);
-    printf("Digite o numero de colunas da matriz: ");
-    scanf("%i",&colunas);
-    printf("\n");
-
-    int **matriz = (int**)malloc(linhas*sizeof(int*)); //ALOCA MATRIZ
-
-    for (i = 0; i < linhas; i++)
-    {
-       matriz[i] = (int*) malloc(colunas*sizeof(int));
-       for (j = 0; j < colunas; j++)
-       {
-            matriz[i][j] = 0;
-       }
-    }
-
-    for(i = 0; i < linhas; i++)  //PREENCHE MATRIZ
-    {
-        for(j = 0; j < colunas; j++)
+        for(i = 0; i < linhas; i++)
         {
-            matriz[i][j] = rand() % 100;
+            for(j = 0; j < colunas; j++)
+            {
+                 matriz[i][j] = rand() % 100;
+            }
         }
-    }
+    printf("\n");
+}
 
-    printf("\nMatriz:\n\n");
+void ler_matriz(int **matriz, int linhas, int colunas)
+{
+    int i,j;
 
-    for(i = 0; i < linhas; i++)  //LE MATRIZ
+    for(i = 0; i < linhas; i++)
     {
         for(j = 0; j < colunas; j++)
         {
@@ -46,7 +47,16 @@ int main()
         printf("\n");
     }
 
-    for(i = 0; i < linhas; i++)  //LOCALIZA TRES MAIORES
+
+}
+
+void local_pos(int **matriz, int linhas, int colunas)
+{
+    int pri=0,seg=0,ter=0,tem1 = 0,tem2 = 0,var1 = 0,var2 = 0,var3 = 0,var4 = 0;
+    int a,b,c,d,e,f;
+    int i,j;
+
+    for(i = 0; i < linhas; i++)
     {
         for(j = 0; j < colunas; j++)
         {
@@ -91,9 +101,28 @@ int main()
     }
 
     printf("\nOs tres maiores elementos da matriz sao: \n\n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n%i na posicao[%d][%d]\n",pri,a+1,b+1,seg,c+1,d+1,ter,e+1,f+1);
-
-
-
-    free(matriz);
-
 }
+
+
+int main()
+{
+    int linhas,colunas;
+    int **matrix;
+
+    printf("Digite o numero de linhas da matriz: ");
+    scanf("%i",&linhas);
+    printf("Digite o numero de colunas da matriz: ");
+    scanf("%i",&colunas);
+    printf("\n");
+
+    matrix = alocar_matriz(linhas,colunas);//ALOCA MATRIZ
+
+    printf("\nMatriz:\n\n");
+    preencher_matriz(matrix,linhas,colunas);//PREENCHE MATRIZ
+    ler_matriz(matrix,linhas,colunas);//LE MATRIZ
+
+    local_pos(matrix,linhas,colunas);//LOCALIZA 3 MAIORES E SUAS POSICOES
+
+    free(matrix);
+}
+
