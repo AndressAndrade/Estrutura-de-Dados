@@ -9,7 +9,7 @@ int *aloca_vetor(int n)
     return vetor;
 }
 
-void imprime(int *vector,int n)
+void preenche_imprime(int *vector,int n)
 {
     int i;
     printf("Digite os valores de seu vetor, separando por espaco:\n");
@@ -31,7 +31,7 @@ int main()
     printf("Digite o tamanho do vetor para alocacao:\n");
     scanf("%i",&x);
     vetor = aloca_vetor(x);
-    imprime(vetor,x);
+    preenche_imprime(vetor,x);
     return 0;
 
 }
