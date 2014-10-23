@@ -50,7 +50,7 @@ void matriz_org(float **matriz, int linhas, int colunas)//DEVOLVE MATRIZ NO LAYO
 int main()
 {
     float **matriz;
-    int i,j,linhas,colunas;
+    int linhas,colunas;
 
     printf("Digite o numero de linhas da matriz: ");
     scanf("%i",&linhas);
