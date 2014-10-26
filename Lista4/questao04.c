@@ -7,7 +7,7 @@ int *alocar_espaco()
 
     p = malloc(40*sizeof(int));
 
-    return;
+    return p;
 }
 
 void preenche_matriz(int *p)
