@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+char *alocar_palavara()
 {
     char *p;
     p = (char*)malloc(100); //alocando dinamicamente char com 100 bytes
+    return p;
+}
 
+void numero_vogais(char *p)
+{
     int controle = 1; //controle para a palavra fim
 
     while(controle != 0)
@@ -47,6 +51,14 @@ int main()
       printf("A palavra tem %i U(s)\n\n",u);
 
     }
+}
+
+int main()
+{
+    char *p;
+    p = alocar_palavara();
+
+    numero_vogais(p);
 
     free(p);
     return 0;
