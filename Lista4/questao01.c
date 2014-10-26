@@ -13,17 +13,21 @@ typedef struct //estrutura de registro
 
 }funcionarios;
 
-int main()
+funcionarios *alocar_registro(int n)
 {
-    int i,n,x;
+    funcionarios *p;
+
+    p = (funcionarios*)malloc(50*sizeof(funcionarios));
+
+    return p;
+}
+
+int preenche_registro(funcionarios *p,int n)
+{
+    int i,x;
     float maiorsal = 0;
     float soma = 0;
-    printf("Digite o numero de registros entre 0 e 50:\n");
-    scanf("%i", &n);
-    printf("\n");
 
-    funcionarios *p;
-    p = (funcionarios*)malloc(50*sizeof(funcionarios)); //alocacao de memoria
 
     printf("Recebendo os dados do funcionario:\n\n");
 
@@ -61,6 +65,13 @@ int main()
 
     p -= n;
     p->SALTOTAL = soma;
+    return x;
+}
+
+void exibe_registro(funcionarios *p,int n)
+{
+    int i;
+    int x = preenche_registro(p,n);
 
     printf("\nExibindo os dados de todos os funcionarios:\n\n");
 
@@ -81,8 +92,20 @@ int main()
     printf("Seu departamento e: %s\n",p[x].DEPTO);
     printf("Sua matricula e: %i\n",p[x].MATRIC);
     printf("O salario total e: %f\n\n",p->SALTOTAL);
-    
-    
+}
+
+int main()
+{
+    int n;
+    printf("Digite o numero de registros entre 0 e 50:\n");
+    scanf("%i", &n);
+    printf("\n");
+
+    funcionarios *p;
+    p = alocar_registro(n);
+
+    exibe_registro(p,n);
+
     free(p);
     return 0;
 }
