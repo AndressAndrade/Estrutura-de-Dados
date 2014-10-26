@@ -1,27 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+void vetor_positivo(int *vetor)
 {
-    
+    int i = 1,c;
     int n = 1;
-    int i = 0;
-    int c = 0;
-    int *vetor;
 
     while(n > 0)
     {
         printf("Digite um valor:\n");
         scanf("%i",&n);
-        vetor[i] = n;
+        vetor = (int*) realloc(vetor, i * sizeof(int));
+        vetor[i-1] = n;
         i++;
-        c++;
     }
-    printf("\nO vetor lido foi:\n\n");
-    for(i = 0; i < c; i++)
-    {
-        printf("%i ",vetor[i]);
-    }
-    return 0;
 
+    printf("\nO vetor lido foi:\n\n");
+    for (c = 0; c < i - 2; c++)
+    {
+        printf("%i ",vetor[c]);
+    }
+}
+
+
+int main()
+{
+    int *vector = NULL;
+    vetor_positivo(vector);
+
+    return 0;
 }
