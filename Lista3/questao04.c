@@ -8,6 +8,16 @@ int *alocar(int n)
     return vetor;
 }
 
+void preenche_vetor(int *vetor, int tamanho)
+{
+    int i;
+    printf("Digite os elementos de seu vetor, separando por espaco:\n");
+    for(i = 0; i < tamanho; i++)
+    {
+        scanf(" %i",&vetor[i]);
+    }
+}
+
 void parimpar(int *vector, int n)
 {
     int i,pa = 0,im = 0;
@@ -31,11 +41,7 @@ int main()
     printf("Digite o numero de elementos do seu vetor:\n");
     scanf("%i",&tamanho);
     vetor = alocar(tamanho);
-    printf("Digite os elementos de seu vetor, separando por espaco:\n");
-    for(i = 0; i < tamanho; i++)
-    {
-        scanf(" %i",&vetor[i]);
-    }
+    preenche_vetor(vetor,tamanho);
     parimpar(vetor,tamanho);
     free(vetor);
     return 0;
