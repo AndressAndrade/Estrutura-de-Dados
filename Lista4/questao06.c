@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+float *alocar_espaco()
 {
-    float *p,matriz[6][6];
-    int i,j;
-    p = malloc(36*sizeof(float));
-    float somalinha = 0;
+    float *p;
 
+    p = malloc(36*sizeof(float));
+
+    return p;
+}
+
+void preenche_exibe(float *p)
+{
+    float matriz[6][6];
+    float somalinha = 0;
+    int i,j;
     printf("Preencha a matriz de 6x6:\n");
     for(i = 0; i < 6;i++)
     {
@@ -23,7 +30,7 @@ int main()
 
     p = p - 36;
 
-    for(i = 0; i < 6;i++)
+    for(i = 0; i < 6;i++)//EXIBE SOMA DE CADA LINHA
     {
         for(j = 0;j < 6;j++)
         {
@@ -32,6 +39,14 @@ int main()
         printf("Soma linha %i: %.2f\n",i+1,somalinha);
         somalinha = 0;
     }
+}
+
+int main()
+{
+    float *p;
+    p = alocar_espaco();
+
+    preenche_exibe(p);
 
     free(p);
     return 0;
