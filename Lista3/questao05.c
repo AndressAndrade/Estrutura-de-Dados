@@ -10,18 +10,9 @@ typedef struct
 
 }alunos;
 
-int main()
+void preenche_registro(alunos *p,int n)
 {
-    int i,n;
-
-    printf("Informe a quantidade de alunos:\n");
-    scanf("%i",&n);
-
-    alunos *p;
-
-    p = (alunos*)malloc(sizeof(alunos));
-
-
+    int i;
     for(i = 0; i < n; i++)
     {
         fflush(stdin);
@@ -41,6 +32,12 @@ int main()
 
     }
     p = p - n;
+}
+
+void exibe_registro(alunos *p,int n)
+{
+    int i;
+
     printf("\nExibindo Cadastros:\n");
 
     for(i = 0 ; i < n; i++)
@@ -52,6 +49,21 @@ int main()
         printf("Ano de Nascimento: %i\n", (p[i]).anonasc);
 
     }
+}
+
+int main()
+{
+    int i,n;
+
+    printf("Informe a quantidade de alunos:\n");
+    scanf("%i",&n);
+
+    alunos *p;
+    p = (alunos*)malloc(n*sizeof(alunos));
+
+    preenche_registro(p,n);
+    exibe_registro(p,n);
+
     free(p);
     return 0;
 }
