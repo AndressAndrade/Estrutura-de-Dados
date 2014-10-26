@@ -27,17 +27,14 @@ int main()
     }registro;
 
     registro *p;
-    p = (registro*)malloc(sizeof(registro));//alocar registro
+    p = (registro*)malloc(50*sizeof(registro));//alocar registro
 
     free(p);
 
     //alocar texto
-    int linhas;
-    printf("Quantas linhas de 1 a 100: "); //até 100 linhas
-    scanf("%i",&linhas);
-    texto = (char**)malloc(linhas*sizeof(char));
-    for(i=0;i<linhas;i++){
-        texto[i]=(char*)malloc(80*sizeof(char));//até 80 caracteres
+
+    
+    char *texto = malloc(100 * 80 * sizeof(char));//alocar texto de ate 100 linhas e 80 caracteres
  
     free(texto);
 
