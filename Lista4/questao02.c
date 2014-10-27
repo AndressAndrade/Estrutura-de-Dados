@@ -9,17 +9,36 @@ typedef struct
     int ANOINICIO;
 }ADM,ENG,MED;
 
-int main()
+ADM *alocar_registroa()
 {
     ADM *a;
-    ENG *e;
-    MED *m;
-    int i,n;
 
     a = (ADM*)malloc(40*sizeof(ADM));
+
+    return a;
+}
+
+ENG *alocar_registroe()
+{
+    ENG *e;
+
     e = (ENG*)malloc(40*sizeof(ENG));
+
+    return e;
+}
+
+MED *alocar_registrom()
+{
+    MED *m;
+
     m = (MED*)malloc(40*sizeof(MED));
 
+    return m;
+}
+
+void cadastro(ENG *e,ADM *a,MED *m)
+{
+    int i,n;
     printf("Digite a quantidade de dados de Administracao:\n");
     scanf("%i", &n);
     printf("\n");
@@ -76,6 +95,19 @@ int main()
         m++;
         printf("\n");
     }
+}
+
+int main()
+{
+    ADM *a;
+    ENG *e;
+    MED *m;
+
+    a = alocar_registroa();
+    e = alocar_registroe();
+    m = alocar_registrom();
+
+    cadastro(e,a,m);
 
     free(a);
     free(e);
