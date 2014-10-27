@@ -8,15 +8,28 @@ typedef struct
     float FATURTOT;
 }registro;
 
-int main()
+registro *aloca_registro()
 {
     registro *r;
     r =(registro*)malloc(3*sizeof(registro));
+    return r;
+}
 
-    float aux1,percapita[3];
-    char *aux2;
+float *aloca_vetor()
+{
+    float *percapita;
 
+    percapita = malloc(3*sizeof(float));
+
+    return percapita;
+}
+
+void preenchexibe_registro(registro *r)
+{
     int i,j;
+    float *percapita,aux1;
+    char *aux2;
+    percapita = aloca_vetor();
 
     r->FILIAL = "SP1";
     printf("Qual a quantidade de funcionarios de SP,entre 0 e 20: ");
@@ -47,7 +60,6 @@ int main()
 
     r -= 3;
 
-
     for(i = 0; i < 3; i++)
     {
         for(j = i+ 1; j < 3;j++)
@@ -69,6 +81,19 @@ int main()
     {
         printf("A renda per capita de %s eh: %.2f\n",r[i].FILIAL,percapita[i]);
     }
+}
+
+
+
+int main()
+{
+    registro *r;
+    float *percapita;
+    r = aloca_registro();
+
+    preenchexibe_registro(r);
+
+
 
 
     free(r);
