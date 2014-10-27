@@ -99,6 +99,16 @@ int main()
     int n;
     printf("Digite o numero de registros entre 0 e 50:\n");
     scanf("%i", &n);
+    if(n <= 0 || n>= 50)
+    {
+        printf("Digite um numero entre 0 e 50:\n");
+        scanf("%i", &n);
+        while((n <= 0 || n>= 50))
+        {
+           printf("Digite um numero entre 0 e 50:\n");
+            scanf("%i", &n);
+        }
+    }
     printf("\n");
 
     funcionarios *p;
