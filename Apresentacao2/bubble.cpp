@@ -11,3 +11,4 @@ void bubbleSort(int* list, int size) {
         }
     }
 }
+
