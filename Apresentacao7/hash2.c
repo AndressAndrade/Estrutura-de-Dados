@@ -54,7 +54,7 @@ int bhash2(int n, int *vetor)
     }
     else
     {
-        while (key < 50)
+        while (key < n)
         {
             key++;
             if(vetor[key] == n)
@@ -70,7 +70,7 @@ int bhash2(int n, int *vetor)
 int main()
 {
     int x,i,y,z;
-    int *k = allocvetor(11);
+    int *k = allocvetor(50);
     for(i = 0; i < 5; i++)
     {
         printf("Digite um valor a ser inserido: ");
